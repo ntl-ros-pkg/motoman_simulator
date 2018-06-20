@@ -1,0 +1,12 @@
+- git:
+    local-name: motoman_robot
+    uri: https://github.com/ntl-ros-pkg/motoman_robot.git
+    version: master
+- git:
+    local-name: dhand_ros_pkg
+    uri: https://github.com/Nishida-Lab/dhand_ros_pkg
+    version: master
+- git:
+    local-name: ntl_recognition
+    uri: https://github.com/ntl-ros-pkg/ntl_recognition.git
+    version: master
