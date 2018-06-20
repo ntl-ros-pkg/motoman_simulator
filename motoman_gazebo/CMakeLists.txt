@@ -4,12 +4,32 @@ find_package(catkin REQUIRED)
 
 catkin_package()
 
-find_package(roslaunch)
-roslaunch_add_file_check(test/sia5_empty_world_launch_test.xml)
-roslaunch_add_file_check(test/sia5_with_jamming_launch_test.xml)
-roslaunch_add_file_check(test/sia5_with_jamming_and_kinectv2_launch_test.xml)
-roslaunch_add_file_check(test/sia5_with_kinectv2_launch_test.xml)
-roslaunch_add_file_check(test/sia5_with_multi_kinectv2_launch_test.xml)
-roslaunch_add_file_check(test/sia5_gazebo_nishida_lab_launch_test.xml)
-roslaunch_add_file_check(test/sia5_with_dhand_launch_test.xml)
-roslaunch_add_file_check(test/sia5_with_dhand_and_multi_kinect_launch_test.xml)
+
+#############
+## Install ##
+#############
+set(LAUNCH_DIRS
+  launch/sda5
+  launch/sia5
+)
+set(MODEL_DIRS
+  models/meshes
+  models/urdf
+)
+set(WORLD_DIRS
+  worlds/sda5
+  worlds/sia5
+)
+foreach(dir ${LAUNCH_DIRS} ${MODEL_DIRS} ${WORLD_DIRS})
+  install(DIRECTORY ${dir}/
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
+endforeach(dir)
+
+#############
+## Testing ##
+#############
+if (CATKIN_ENABLE_TESTING)
+  find_package(roslaunch REQUIRED)
+  roslaunch_add_file_check(launch/sda5)
+  roslaunch_add_file_check(launch/sia5)
+endif()
