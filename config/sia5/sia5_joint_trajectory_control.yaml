@@ -1,0 +1,31 @@
+# Publish all joint states -----------------------------------
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+  
+sia5_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - joint_s
+    - joint_l
+    - joint_e
+    - joint_u
+    - joint_r
+    - joint_b
+    - joint_t
+  constraints:
+    goal_time: &goal_time_constraint 2.0
+    joint_s:
+      goal: &goal_pos_constraint 0.3
+    joint_l:
+      goal: *goal_pos_constraint
+    joint_e:
+      goal: *goal_pos_constraint
+    joint_u:
+      goal: *goal_pos_constraint
+    joint_r:
+      goal: *goal_pos_constraint
+    joint_b:
+      goal: *goal_pos_constraint
+    joint_t:
+      goal: *goal_pos_constraint
