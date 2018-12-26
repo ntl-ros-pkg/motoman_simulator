@@ -57,10 +57,12 @@ endforeach(scripts)
 set(CONFIG_DIRS
   config/sda5
   config/sia5
+  config/sia20
   )
 set(LAUNCH_DIRS
   launch/sda5
   launch/sia5
+  launch/sia20
 )
 
 foreach(dir ${CONFIG_DIRS} ${LAUNCH_DIRS})
@@ -75,4 +77,5 @@ if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)
   roslaunch_add_file_check(launch/sda5)
   roslaunch_add_file_check(launch/sia5)
+  roslaunch_add_file_check(launch/sia20)
 endif()
