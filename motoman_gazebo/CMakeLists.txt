@@ -11,6 +11,7 @@ catkin_package()
 set(LAUNCH_DIRS
   launch/sda5
   launch/sia5
+  launch/sia20
 )
 set(MODEL_DIRS
   models/meshes
@@ -19,6 +20,7 @@ set(MODEL_DIRS
 set(WORLD_DIRS
   worlds/sda5
   worlds/sia5
+  worlds/sia20
 )
 foreach(dir ${LAUNCH_DIRS} ${MODEL_DIRS} ${WORLD_DIRS})
   install(DIRECTORY ${dir}/
@@ -32,4 +34,5 @@ if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)
   roslaunch_add_file_check(launch/sda5)
   roslaunch_add_file_check(launch/sia5)
+  roslaunch_add_file_check(launch/sia20)
 endif()
