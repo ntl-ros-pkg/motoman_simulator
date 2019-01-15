@@ -11,7 +11,7 @@
   <include file="$(find motoman_gazebo)/launch/motomini/$(arg world).launch" />
 
 
-  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find motoman_description)/robots/motomini/motomini_with_kinectv2.urdf.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find motoman_description)/robots/motomini/motomini_with_gripper_kinectv2.urdf.xacro" />
 
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_robot" respawn="false" output="screen"
     args="-param robot_description
