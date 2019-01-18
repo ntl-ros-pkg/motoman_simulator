@@ -25,6 +25,7 @@
   <!-- launch joint state controller -->
   <include file="$(find motoman_control)/launch/motomini/motomini_sim_control.launch"/>
 
+  <include file="$(find motoman_control)/launch/tool/gripper_sim_control.launch"/>
   <!-- launch arm and gripper controller -->
   <!--include file="$(find youbot_gazebo_control)/launch/arm_controller.launch" /-->
 

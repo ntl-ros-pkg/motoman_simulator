@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find motoman_control)/config/tool/gripper_joint_trajectory_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="gripper_controller_spawner" pkg="controller_manager"
+		type="spawner" output="screen" 
+		args="gripper_controller"/>
+
+</launch>
