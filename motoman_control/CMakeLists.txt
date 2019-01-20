@@ -65,6 +65,7 @@ set(LAUNCH_DIRS
   launch/sda5
   launch/sia5
   launch/sia20
+  launch/tool
 )
 
 foreach(dir ${CONFIG_DIRS} ${LAUNCH_DIRS})
@@ -81,4 +82,5 @@ if (CATKIN_ENABLE_TESTING)
   roslaunch_add_file_check(launch/sda5)
   roslaunch_add_file_check(launch/sia5)
   roslaunch_add_file_check(launch/sia20)
+  roslaunch_add_file_check(launch/tool)
 endif()
