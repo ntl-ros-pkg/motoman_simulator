@@ -27,8 +27,6 @@ add_executable(motoman_control_node
   src/motoman_control_node.cpp
 )
 
-add_dependencies(motoman_control_node motoman_control_generate_messages_cpp)
-
 target_link_libraries(motoman_control_node
   ${catkin_LIBRARIES}
 )
