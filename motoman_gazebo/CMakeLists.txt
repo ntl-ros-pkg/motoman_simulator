@@ -9,6 +9,7 @@ catkin_package()
 ## Install ##
 #############
 set(LAUNCH_DIRS
+  launch/motomini
   launch/sda5
   launch/sia5
   launch/sia20
@@ -18,6 +19,7 @@ set(MODEL_DIRS
   models/urdf
 )
 set(WORLD_DIRS
+  worlds/motomini
   worlds/sda5
   worlds/sia5
   worlds/sia20
@@ -32,6 +34,7 @@ endforeach(dir)
 #############
 if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)
+  roslaunch_add_file_check(launch/motomini)
   roslaunch_add_file_check(launch/sda5)
   roslaunch_add_file_check(launch/sia5)
   roslaunch_add_file_check(launch/sia20)

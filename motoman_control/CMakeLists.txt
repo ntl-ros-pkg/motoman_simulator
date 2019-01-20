@@ -27,8 +27,6 @@ add_executable(motoman_control_node
   src/motoman_control_node.cpp
 )
 
-add_dependencies(motoman_control_node motoman_control_generate_messages_cpp)
-
 target_link_libraries(motoman_control_node
   ${catkin_LIBRARIES}
 )
@@ -55,14 +53,18 @@ endforeach(scripts)
 
 # Install all files
 set(CONFIG_DIRS
+  config/motomini
   config/sda5
   config/sia5
   config/sia20
+  config/tool
   )
 set(LAUNCH_DIRS
+  launch/motomini
   launch/sda5
   launch/sia5
   launch/sia20
+  launch/tool
 )
 
 foreach(dir ${CONFIG_DIRS} ${LAUNCH_DIRS})
@@ -75,7 +77,9 @@ endforeach(dir)
 #############
 if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)
+  roslaunch_add_file_check(launch/motomini)
   roslaunch_add_file_check(launch/sda5)
   roslaunch_add_file_check(launch/sia5)
   roslaunch_add_file_check(launch/sia20)
+  roslaunch_add_file_check(launch/tool)
 endif()
