@@ -57,6 +57,7 @@ set(CONFIG_DIRS
   config/sda5
   config/sia5
   config/sia20
+  config/tool
   )
 set(LAUNCH_DIRS
   launch/motomini
