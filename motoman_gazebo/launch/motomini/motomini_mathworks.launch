@@ -6,12 +6,14 @@
   <arg name="init_pos_x" default="0.0"/>
   <arg name="init_pos_y" default="0.0"/>
   <arg name="init_pos_z" default="1.02"/>
+  <arg name="load_grasp_fix" default="false"/>
 
   <!-- launch world -->
   <include file="$(find motoman_gazebo)/launch/motomini/$(arg world).launch" />
 
 
-  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find motoman_description)/robots/motomini/motomini_with_gripper_kinectv2.urdf.xacro" />
+  <arg name="xacro_arguments" default="load_grasp_fix:=$(arg load_grasp_fix)"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find motoman_description)/robots/motomini/motomini_with_gripper_kinectv2.urdf.xacro $(arg xacro_arguments)" />
 
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_robot" respawn="false" output="screen"
     args="-param robot_description
