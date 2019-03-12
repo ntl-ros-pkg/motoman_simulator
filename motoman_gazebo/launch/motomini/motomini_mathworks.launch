@@ -11,8 +11,7 @@
   <!-- launch world -->
   <include file="$(find motoman_gazebo)/launch/motomini/$(arg world).launch" />
 
-
-  <arg name="xacro_arguments" default="load_grasp_fix:=$(arg load_grasp_fix)"/>
+  <arosrun gazebo_ros spawn_model -database coke_can -gazebo -model coke_can -y 1rg name="xacro_arguments" default="load_grasp_fix:=$(arg load_grasp_fix)"/>
   <param name="robot_description" command="$(find xacro)/xacro --inorder $(find motoman_description)/robots/motomini/motomini_with_gripper_kinectv2.urdf.xacro $(arg xacro_arguments)" />
 
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_robot" respawn="false" output="screen"

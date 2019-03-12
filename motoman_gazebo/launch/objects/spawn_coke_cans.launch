@@ -1,0 +1,13 @@
+<launch>
+    <param name="beer_sdf" textfile="$(find motoman_gazebo)/sdf/beer/model-1_4.sdf" />
+    <param name="coke_can_sdf" textfile="$(find motoman_gazebo)/sdf/coke_can/model-1_4.sdf" />
+    <param name="plastic_cup_sdf" textfile="$(find motoman_gazebo)/sdf/plastic_cup/model.sdf" />
+    <node name="$(anon spawn2)" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-sdf -param coke_can_sdf -model coke_model1 -x 0.28 -y 0.12 -z 1.015" />
+    <node name="$(anon spawn3)" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-sdf -param coke_can_sdf -model coke_model2 -x 0.28 -y 0 -z 1.015" />
+    <node name="$(anon spawn4)" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-sdf -param coke_can_sdf -model coke_model3 -x 0.28 -y -0.12 -z 1.015" />
+    <!--node name="$(anon spawn3)" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-sdf -param plastic_cup_sdf -model cup_model -x 0.28 -y 0.00 -z 1.015" /-->
+</launch>
