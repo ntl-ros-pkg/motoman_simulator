@@ -1,0 +1,13 @@
+<launch>
+    <param name="disk_part_sdf" textfile="$(find motoman_gazebo)/sdf/disk_part/model.sdf" />
+    <param name="t_brace_part_sdf" textfile="$(find motoman_gazebo)/sdf/t_brace_part/model.sdf" />
+    <param name="arm_part_sdf" textfile="$(find motoman_gazebo)/sdf/arm_part/model.sdf" />
+
+    <node name="$(anon spawn2)" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-sdf -param disk_part_sdf -model disk_part -x 0.28 -y 0.12 -z 1.015" />
+    <node name="$(anon spawn3)" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-sdf -param t_brace_part_sdf -model t_brace_part -x 0.28 -y 0 -z 1.015" />
+    <node name="$(anon spawn4)" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-sdf -param arm_part_sdf -model arm_part -x 0.28 -y -0.12 -z 1.015 -Y 1.57075" />
+
+</launch>
