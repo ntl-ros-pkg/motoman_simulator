@@ -19,11 +19,11 @@
 
       <collision name="collision">
         <!--pose>0 -0.12223 0.101835 0 0 0</pose-->
-        <pose>0 -0.024446 0.020367 0 0 0</pose>
+        <pose>0 -0.012223 0.0101835 0 0 0</pose>
         <geometry>
           <box>
             <!--size>0.29824 0.43206 0.20367</size-->
-            <size>0.059648 0.086412 0.040734</size>
+            <size>0.029824 0.043206 0.020367</size>
           </box>
         </geometry>
       </collision>
@@ -31,7 +31,7 @@
          <geometry>
            <mesh>
              <uri>model://arm_part/meshes/arm.dae</uri>
-             <scale>0.2 0.2 0.2</scale>
+             <scale>0.1 0.1 0.1</scale>
            </mesh>
          </geometry>
         <material>
