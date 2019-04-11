@@ -24,8 +24,8 @@
           <cylinder>
             <!--length>0.0579</length-->
             <!--radius>0.15678</radius-->
-            <length>0.02316</length>
-            <radius>0.031356</radius>
+            <length>0.011580</length>
+            <radius>0.015678</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -35,7 +35,7 @@
          <geometry>
            <mesh>
              <uri>model://disk_part/meshes/disk.dae</uri>
-             <scale>0.2 0.2 0.4</scale>
+             <scale>0.1 0.1 0.2</scale>
            </mesh>
          </geometry>
         <material>
