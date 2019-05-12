@@ -1,0 +1,8 @@
+# gazebo ros control pid params
+gazebo_ros_control/pid_gains:
+  joint_1_s: {p:  100, i:   10, d: 0, i_clamp: 100}
+  joint_2_l: {p: 1000, i:  500, d: 0, i_clamp: 500}
+  joint_3_u: {p:  100, i:   10, d: 0, i_clamp: 100}
+  joint_4_r: {p:   10, i:    1, d: 0, i_clamp: 100}
+  joint_5_b: {p:   10, i:    1, d: 0, i_clamp: 100}
+  joint_6_t: {p:   10, i:    1, d: 0, i_clamp: 100}

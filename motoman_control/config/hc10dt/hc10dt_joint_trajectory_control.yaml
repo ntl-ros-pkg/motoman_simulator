@@ -1,0 +1,28 @@
+# Publish all joint states -----------------------------------
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+  
+hc10dt_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - joint_1_s
+    - joint_2_l
+    - joint_3_u
+    - joint_4_r
+    - joint_5_b
+    - joint_6_t
+  constraints:
+    goal_time: &goal_time_constraint 2.0
+    joint_1_s:
+      goal: &goal_pos_constraint 0.3
+    joint_2_l:
+      goal: *goal_pos_constraint
+    joint_3_u:
+      goal: *goal_pos_constraint
+    joint_4_r:
+      goal: *goal_pos_constraint
+    joint_5_b:
+      goal: *goal_pos_constraint
+    joint_6_t:
+      goal: *goal_pos_constraint
