@@ -8,15 +8,19 @@
   <license>BSD</license>
   <url type="repository">http://github.com/Nishida-Lab/motoman_project</url>
 
+  <author email="groadpg@gmail.com">Ryodo Tanaka</author>
+
   <buildtool_depend>catkin</buildtool_depend>
+
   <depend>roslaunch</depend>
-  <exec_depend>ros_control</exec_depend>
-  <exec_depend>gazebo_ros_control</exec_depend>
+
   <exec_depend>gazebo_ros</exec_depend>
-  <exec_depend>motoman_point_cloud</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
   <exec_depend>motoman_control</exec_depend>
   <exec_depend>motoman_description</exec_depend>
-  <exec_depend>xacro</exec_depend>
+  <exec_depend>motoman_point_cloud</exec_depend>
+  <exec_depend>ros_control</exec_depend>
   <exec_depend>rviz</exec_depend>
+  <exec_depend>xacro</exec_depend>
   
 </package>
