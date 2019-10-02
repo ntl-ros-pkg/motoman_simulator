@@ -10,3 +10,11 @@
     local-name: ntl_recognition
     uri: https://github.com/ntl-ros-pkg/ntl_recognition.git
     version: master
+- git:
+    local-name: motoman_deps/general-message-pkgs
+    uri: https://github.com/JenniferBuehler/general-message-pkgs
+    version: master
+- git:
+    local-name: motoman_deps/gazebo-pkgs
+    uri: https://github.com/JenniferBuehler/gazebo-pkgs
+    version: master

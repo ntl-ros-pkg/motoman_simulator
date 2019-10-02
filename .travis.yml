@@ -18,7 +18,7 @@ env:
     - ROS_PARALLEL_TEST_JOBS=-j`nproc`		
     - UPSTREAM_WORKSPACE=file
     - ROSINSTALL_FILENAME=.kinetic_depends.rosinstall
-    
+#    - ROSDEP_SKIP_KEYS="object_msgs object_msgs_tools"
   matrix:		
     - ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu
     - ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros-shadow-fixed/ubuntu
