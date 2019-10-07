@@ -34,17 +34,4 @@
 
   <!-- ros_control motoman launch file -->
   <include file="$(find motoman_control)/launch/sia5/sia5_sim_control.launch" />
-  <!-- ros_control dhand launch file -->
-  <rosparam file="$(find dhand_control)/config/dhand_joint_position_control.yaml" command="load"/>
-  <node name="controller_spawner" pkg="controller_manager"
-		type="spawner" output="screen"
-		args="dhand/joint_state_controller
-			  dhand/joint_finger_base_right_position_controller
-			  dhand/joint_finger_base_left_position_controller
-			  dhand/joint_finger_middle_middle_position_controller
-			  dhand/joint_finger_middle_right_position_controller
-			  dhand/joint_finger_middle_left_position_controller
-			  dhand/joint_finger_top_middle_position_controller
-			  dhand/joint_finger_top_right_position_controller
-			  dhand/joint_finger_top_left_position_controller"/>
 </launch>
